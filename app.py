@@ -21,7 +21,7 @@ class EqualizerApp:
 
 
 if __name__ == '__main__':
-    app = EqualizerApp(10)
+    app = EqualizerApp(8)
     app.run()
 
 

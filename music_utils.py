@@ -22,6 +22,7 @@ class MusicUtils:
     channels_original = []
     specter = None
     specter_original = None
+    new_specter = []
     each_frequency_elements = []
     maximum_frequency = 0
     minimum_frequency = 0
@@ -122,9 +123,10 @@ class MusicUtils:
         :type strength: int
         """
 
-        new_specter = self.specter_original.copy()
+        new_specter = self.specter.copy()
         for i in range(self.channels_number):
             new_specter[i][self.each_frequency_elements * low_frequency
                            : self.each_frequency_elements * high_frequency + 1] *= 10 ** (strength / 20)
 
         self.channel_frames = (np.fft.irfft(new_specter)).astype(self.types[self.samp_width])
+        self.new_specter = new_specter
