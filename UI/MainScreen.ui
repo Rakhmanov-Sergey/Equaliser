@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1174</width>
-    <height>630</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,10 +23,10 @@
       <x>0</x>
       <y>0</y>
       <width>1184</width>
-      <height>581</height>
+      <height>651</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,5,0,3">
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,5,0,7,0">
      <property name="topMargin">
       <number>20</number>
      </property>
@@ -238,10 +238,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="value">
           <number>0</number>
@@ -254,10 +254,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_4">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -267,10 +267,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_3">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -280,10 +280,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_2">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -293,10 +293,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_5">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -306,10 +306,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_7">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -319,10 +319,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_10">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -332,10 +332,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_6">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -345,10 +345,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_9">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -358,10 +358,10 @@
        <item>
         <widget class="QSlider" name="verticalSlider_8">
          <property name="minimum">
-          <number>-100</number>
+          <number>-20</number>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -481,19 +481,48 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="plotsLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>15</number>
+       </property>
+       <property name="rightMargin">
+        <number>20</number>
+       </property>
        <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+        <widget class="PlotWidget" name="plotBefore" native="true"/>
+       </item>
+       <item>
+        <widget class="PlotWidget" name="plotAfter" native="true"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>До изменения</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
-        </spacer>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>После изменения</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -524,6 +553,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
